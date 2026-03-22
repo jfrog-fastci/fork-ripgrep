@@ -365,6 +365,7 @@ fn generate(mode: crate::flags::GenerateMode) -> anyhow::Result<ExitCode> {
         }
     };
     writeln!(std::io::stdout(), "{}", output.trim_end())?;
+    
     Ok(ExitCode::from(0))
 }
 

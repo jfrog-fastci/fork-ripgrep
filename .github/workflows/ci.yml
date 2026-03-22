@@ -17,7 +17,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           cache-from: type=gha,scope=ripgrep
-          cache-to: ${{ github.ref == 'refs/heads/master' && 'type=gha,mode=max,scope=ripgrep'}}
+          cache-to: ${{ github.ref == 'refs/heads/master' && 'type=gha,mode=max,scope=ripgrep' || ''}}
           push: false
           tags: user/app:latest
           outputs: type=image,name-canonical=true
